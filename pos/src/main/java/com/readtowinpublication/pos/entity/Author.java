@@ -13,20 +13,20 @@ public class Author {
     private String email;
     private String contactNo;
 
-//    @OneToMany(
-//            cascade = CascadeType.ALL,
-//            mappedBy = "author",
-//            fetch = FetchType.EAGER
-//    )
-//    private List<Book> books;
-//
-//    public List<Book> getBooks() {
-//        return books;
-//    }
-//
-//    public void setBooks(List<Book> books) {
-//        this.books = books;
-//    }
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "author",
+            fetch = FetchType.EAGER
+    )
+    private List<Book> books;
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 
     public Author(int authorId, String firstName, String lastName, String email, String contactNo) {
         this.authorId = authorId;
